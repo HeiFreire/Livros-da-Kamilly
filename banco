@@ -1,0 +1,86 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 03-Maio-2021 às 17:57
+-- Versão do servidor: 10.4.18-MariaDB
+-- versão do PHP: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `atividades`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `livrosdakamilly`
+--
+
+CREATE TABLE `livrosdakamilly` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(35) DEFAULT NULL,
+  `genero` varchar(20) DEFAULT NULL,
+  `data_de_compra` date DEFAULT NULL,
+  `paginas` int(10) DEFAULT NULL,
+  `preco` float DEFAULT NULL,
+  `comprei` varchar(3) DEFAULT NULL,
+  `autor` varchar(35) DEFAULT NULL,
+  `editora` varchar(35) DEFAULT NULL,
+  `publicacao` date DEFAULT NULL,
+  `avaliacao` int(5) DEFAULT NULL,
+  `endereco_autor` varchar(30) DEFAULT NULL,
+  `data_de_nascimento` date DEFAULT NULL,
+  `pais` varchar(20) DEFAULT NULL,
+  `telefone_da_editora` int(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `livrosdakamilly`
+--
+
+INSERT INTO `livrosdakamilly` (`id`, `titulo`, `genero`, `data_de_compra`, `paginas`, `preco`, `comprei`, `autor`, `editora`, `publicacao`, `avaliacao`, `endereco_autor`, `data_de_nascimento`, `pais`, `telefone_da_editora`) VALUES
+(1, 'Harry Potter e a Pedra Filosofal', 'Fantasia', '2005-03-02', 368, 20, 'Sim', 'J. K. Rowling', 'Rocco', '2005-03-02', 10, '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 2025550171),
+(2, 'Harry Potter e o Prisioneiro de Azk', 'Fantasia', '2005-03-02', 598, 20, 'Sim', 'J. K. Rowling', 'Rocco', '2005-03-02', 10, '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 2025550171),
+(3, 'Harry Potter e a Ordem da Fênix', 'Fantasia', NULL, 798, 50, 'Não', 'J. K. Rowling', 'Rocco', '2005-03-02', 10, '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 2025550171),
+(4, 'Harry Potter e a Câmara Secreta', 'Fantasia', NULL, 328, 20, 'Não', 'J. K. Rowling', 'Rocco', '2005-03-02', 6, '3227  Fairmont Avenue', '1971-08-14', 'Inglaterra', 2025550171),
+(5, 'Garota Exemplar', 'Suspense', NULL, 128, 60, 'Não', 'Gillian Flynn', 'Intriseca', '2009-11-10', 4, '2103  Randall Drive', '2000-07-17', 'EUA', 2025550187),
+(6, 'Diálogos Impossíveis', 'Comédia', NULL, 208, 1, 'Não', 'Veríssimo', 'Lero-Lero', '2005-02-03', 8, 'Rocky Mount, 27801', '1992-06-02', 'Brasil', 2025550154),
+(7, 'Arafat', 'Suspense', '2004-03-02', 360, 30, 'Sim', 'Clive Baker', 'Dark Sense', '2020-05-02', 10, '2496 Rose Avenue', '1984-03-01', 'EUA', 2025550185),
+(8, 'Este não é mais um livro de dieta', 'Auto-Ajuda', '2019-01-25', 150, 17, 'Sim', 'Rodrigo Polesso', 'Gente', '2012-04-02', 9, '3788 Wetzel Lane', '2001-03-12', 'Brasil', 2025550110),
+(9, 'Atenção Plena: Mindfulness', 'Ficção Científica', NULL, 122, 20, 'Não', 'Ruy Ohtake', 'Tomie Ohtake', '2005-08-20', 2, '2710 Bobcat Drive', '1557-09-29', 'Brasil', 2025550134);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `livrosdakamilly`
+--
+ALTER TABLE `livrosdakamilly`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `livrosdakamilly`
+--
+ALTER TABLE `livrosdakamilly`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
